@@ -1,0 +1,467 @@
+{
+ "lessons": [
+  {
+   "id": "regex-to-nfa",
+   "title": "Regex to NFA",
+   "stages": [
+    {
+     "id": "regex-nfa",
+     "algorithm": "regexToNfa",
+     "demoInput": "a|b",
+     "cues": [
+      {
+       "id": "rn-fragment",
+       "trigger": {
+        "stepKind": "fragment"
+       },
+       "text": {
+        "en": {
+         "subtitle": "Thompson construction systematically transforms each regular expression element into an NFA sub-automaton. It creates dedicated states for symbols and prepares inductive composition."
+        },
+        "ur": {
+         "subtitle": "تھامپسن کنسٹرکشن ریگولر ایکسپریشن کے ہر عنصر کو باقاعدہ NFA میں تبدیل کرتی ہے، جس میں علامات کے لیے مخصوص states بنا کر باہمی تعلق کی بنیاد رکھی جاتی ہے۔"
+        },
+        "ur-roman": {
+         "subtitle": "Thompson construction regular expression ke har ansar ko baqaida NFA mein tabdeel karti hai, jis mein alamaat ke liye makhsoos states bana kar bahami talluq ki bunyad rakhi jati hai.",
+         "voiceText": "تھامپسن کنسٹرکشن ریگولر ایکسپریشن کے ہر عنصر کو باقاعدہ NFA میں تبدیل کرتی ہے، جس میں علامات کے لیے مخصوص states بنا کر باہمی تعلق کی بنیاد رکھی جاتی ہے۔"
+        }
+       }
+      },
+      {
+       "id": "rn-done",
+       "trigger": {
+        "stepKind": "done"
+       },
+       "text": {
+        "en": {
+         "subtitle": "All component fragments are now interconnected using epsilon transitions according to Thompson rules. The finished NFA features a single start state and one accepting state."
+        },
+        "ur": {
+         "subtitle": "تھامپسن کے اصولوں کے تحت تمام متعلقہ حصے ایپسیلون ٹرانزیشنز کے ذریعے جوڑ دیے گئے ہیں۔ اس مکمل NFA میں اب صرف ایک start state اور ایک ہی accepting state ہے۔"
+        },
+        "ur-roman": {
+         "subtitle": "Thompson ke usoolon ke tehat tamam mutaliqa hisse epsilon transitions ke zariye jor diye gaye hain. Is mukammal NFA mein ab sirf aik start state aur aik hi accepting state hai.",
+         "voiceText": "تھامپسن کے اصولوں کے تحت تمام متعلقہ حصے ایپسیلون ٹرانزیشنز کے ذریعے جوڑ دیے گئے ہیں۔ اس مکمل NFA میں اب صرف ایک start state اور ایک ہی accepting state ہے۔"
+        }
+       }
+      },
+      {
+       "id": "rn-result",
+       "trigger": {
+        "stage": "resultReady"
+       },
+       "text": {
+        "en": {
+         "subtitle": "The regular expression {pattern} has been compiled into an equivalent NFA with {stateCount} states and {edgeCount} transitions, ready for subset construction."
+        },
+        "ur": {
+         "subtitle": "ریگولر ایکسپریشن {pattern} کامیابی کے ساتھ {stateCount} states اور {edgeCount} transitions والے مساوی NFA میں تبدیل ہو چکی ہے، جو کہ سب سیٹ کنسٹرکشن کے لیے تیار ہے۔"
+        },
+        "ur-roman": {
+         "subtitle": "Regular expression {pattern} kamyabi ke sath {stateCount} states aur {edgeCount} transitions wale masawi NFA mein tabdeel ho chuki hai, jo ke subset construction ke liye tayyar hai.",
+         "voiceText": "ریگولر ایکسپریشن {pattern} کامیابی کے ساتھ {stateCount} states اور {edgeCount} transitions والے مساوی NFA میں تبدیل ہو چکی ہے، جو کہ سب سیٹ کنسٹرکشن کے لیے تیار ہے۔"
+        }
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nfa-to-dfa",
+   "title": "NFA to DFA",
+   "stages": [
+    {
+     "id": "nfa-dfa",
+     "algorithm": "nfaToDfa",
+     "demoInput": "(a|b)*abb",
+     "cues": [
+      {
+       "id": "nd-closure",
+       "trigger": {
+        "stepKind": "startClosure"
+       },
+       "text": {
+        "en": {
+         "subtitle": "Subset construction computes the epsilon-closure of the initial NFA start state, identifying every state reachable purely through epsilon transitions without reading any input symbol."
+        },
+        "ur": {
+         "subtitle": "سب سیٹ کنسٹرکشن NFA کی شروعاتی حالت کے ایپسیلون کلوزر کا حساب لگاتی ہے، جس میں بغیر کوئی ان پٹ پڑھے صرف ایپسیلون کے ذریعے پہنچنے والی تمام states کی نشاندہی ہوتی ہے۔"
+        },
+        "ur-roman": {
+         "subtitle": "Subset construction NFA ki shuruati halat ke epsilon-closure ka hisab lagati hai, jis mein baghair koi input parhe sirf epsilon ke zariye pohanchne wali tamam states ki nishandehi hoti hai.",
+         "voiceText": "سب سیٹ کنسٹرکشن NFA کی شروعاتی حالت کے ایپسیلون کلوزر کا حساب لگاتی ہے، جس میں بغیر کوئی ان پٹ پڑھے صرف ایپسیلون کے ذریعے پہنچنے والی تمام states کی نشاندہی ہوتی ہے۔"
+        }
+       }
+      },
+      {
+       "id": "nd-new",
+       "trigger": {
+        "stepKind": "newState"
+       },
+       "text": {
+        "en": {
+         "subtitle": "A distinct subset of reachable NFA states has been discovered and mapped to a single deterministic DFA state. If this subset contains any accepting NFA state, the DFA state becomes accepting."
+        },
+        "ur": {
+         "subtitle": "پہنچ کے قابل NFA states کا ایک نیا مجموعہ دریافت ہوا ہے جسے ایک واحد deterministic DFA state بنا دیا گیا ہے۔ اگر اس میں NFA کی کوئی accepting state ہو تو یہ DFA state بھی accepting بن جاتی ہے۔"
+        },
+        "ur-roman": {
+         "subtitle": "Pohanch ke qabil NFA states ka aik naya majmua daryaft hua hai jisay aik wahid deterministic DFA state bana diya gaya hai. Agar is mein NFA ki koi accepting state ho to yeh DFA state bhi accepting ban jati hai.",
+         "voiceText": "پہنچ کے قابل NFA states کا ایک نیا مجموعہ دریافت ہوا ہے جسے ایک واحد deterministic DFA state بنا دیا گیا ہے۔ اگر اس میں NFA کی کوئی accepting state ہو تو یہ DFA state بھی accepting بن جاتی ہے۔"
+        }
+       }
+      },
+      {
+       "id": "nd-result",
+       "trigger": {
+        "stage": "resultReady"
+       },
+       "text": {
+        "en": {
+         "subtitle": "Subset construction is complete: the nondeterministic automaton with {nfaCount} NFA states has been successfully converted into an equivalent deterministic automaton with {dfaCount} DFA states."
+        },
+        "ur": {
+         "subtitle": "سب سیٹ کنسٹرکشن مکمل ہو چکی ہے: {nfaCount} states پر مشتمل غیر یقینی NFA کو {dfaCount} states والے مساوی یقینی DFA میں کامیابی سے تبدیل کر دیا گیا ہے۔"
+        },
+        "ur-roman": {
+         "subtitle": "Subset construction mukammal ho chuki hai: {nfaCount} states par mushtamil ghair yaqeeni NFA ko {dfaCount} states wale masawi yaqeeni DFA mein kamyabi se tabdeel kar diya gaya hai.",
+         "voiceText": "سب سیٹ کنسٹرکشن مکمل ہو چکی ہے: {nfaCount} states پر مشتمل غیر یقینی NFA کو {dfaCount} states والے مساوی یقینی DFA میں کامیابی سے تبدیل کر دیا گیا ہے۔"
+        }
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dfa-acceptance",
+   "title": "DFA string acceptance",
+   "stages": [
+    {
+     "id": "acceptance-accepted",
+     "algorithm": "acceptance",
+     "demoInput": "(a|b)*abb aabb",
+     "cues": [
+      {
+       "id": "ac-start",
+       "trigger": {
+        "stepKind": "start"
+       },
+       "text": {
+        "en": {
+         "subtitle": "String simulation begins at the designated DFA start state to test the input {input}. The automaton will read the input sequentially, executing one deterministic transition per character."
+        },
+        "ur": {
+         "subtitle": "اسٹرنگ جانچ کا آغاز ٹیسٹ ان پٹ {input} کے ساتھ DFA کی start state سے ہوتا ہے۔ آٹومیٹن ہر حرف کو ترتیب وار پڑھے گا اور ہر حرف پر ایک واضح ٹرانزیشن پر چلے گا۔"
+        },
+        "ur-roman": {
+         "subtitle": "String janch ka aaghaz test input {input} ke sath DFA ki start state se hota hai. Automaton har harf ko tarteeb war parhe ga aur har harf par aik wazeh transition par chale ga.",
+         "voiceText": "اسٹرنگ جانچ کا آغاز ٹیسٹ ان پٹ {input} کے ساتھ DFA کی start state سے ہوتا ہے۔ آٹومیٹن ہر حرف کو ترتیب وار پڑھے گا اور ہر حرف پر ایک واضح ٹرانزیشن پر چلے گا۔"
+        }
+       }
+      },
+      {
+       "id": "ac-step",
+       "trigger": {
+        "stepKind": "step"
+       },
+       "text": {
+        "en": {
+         "subtitle": "The DFA processes the next character in the stream and follows the single deterministic transition defined for that symbol, transitioning predictably to the target state."
+        },
+        "ur": {
+         "subtitle": "DFA اگلے حرف کو پڑھ کر اس علامت کے لیے متعین کردہ واحد deterministic ٹرانزیشن پر آگے بڑھتا ہے اور اگلی متوقع حالت میں داخل ہوتا ہے۔"
+        },
+        "ur-roman": {
+         "subtitle": "DFA agle harf ko parh kar us alamat ke liye mutayyan karda wahid deterministic transition par aage barhta hai aur agli mutawaqqe halat mein dakhil hota hai.",
+         "voiceText": "DFA اگلے حرف کو پڑھ کر اس علامت کے لیے متعین کردہ واحد deterministic ٹرانزیشن پر آگے بڑھتا ہے اور اگلی متوقع حالت میں داخل ہوتا ہے۔"
+        }
+       }
+      },
+      {
+       "id": "ac-ok",
+       "trigger": {
+        "stage": "resultReady"
+       },
+       "text": {
+        "en": {
+         "subtitle": "All characters in the string {input} were processed successfully and the DFA terminated in a valid accepting state. The string is formally accepted."
+        },
+        "ur": {
+         "subtitle": "اسٹرنگ {input} کے تمام حروف کامیابی کے ساتھ مکمل پروسیس ہو گئے اور DFA ایک درست accepting state میں رکا ہے۔ لہٰذا یہ اسٹرنگ باضابطہ طور پر قبول ہے۔"
+        },
+        "ur-roman": {
+         "subtitle": "String {input} ke tamam huroof kamyabi ke sath mukammal process ho gaye aur DFA aik durust accepting state mein ruka hai. Lehaza yeh string bazabta tor par qubool hai.",
+         "voiceText": "اسٹرنگ {input} کے تمام حروف کامیابی کے ساتھ مکمل پروسیس ہو گئے اور DFA ایک درست accepting state میں رکا ہے۔ لہٰذا یہ اسٹرنگ باضابطہ طور پر قبول ہے۔"
+        }
+       }
+      }
+     ]
+    },
+    {
+     "id": "acceptance-rejected",
+     "algorithm": "acceptance",
+     "demoInput": "(a|b)*abb aba",
+     "cues": [
+      {
+       "id": "ar-start",
+       "trigger": {
+        "stepKind": "start"
+       },
+       "text": {
+        "en": {
+         "subtitle": "Rejection testing begins at the DFA start state with the candidate string {input}. The automaton will trace each symbol to verify whether a valid path to an accepting state exists."
+        },
+        "ur": {
+         "subtitle": "ریجیکشن جانچ کا آغاز ٹیسٹ اسٹرنگ {input} کے ساتھ DFA کی start state سے ہوتا ہے۔ آٹومیٹن ہر علامت کو دیکھ کر چیک کرے گا کہ آیا accepting حالت تک کوئی درست راستہ موجود ہے۔"
+        },
+        "ur-roman": {
+         "subtitle": "Rejection janch ka aaghaz test string {input} ke sath DFA ki start state se hota hai. Automaton har alamat ko dekh kar check kare ga ke aaya accepting halat tak koi durust rasta mojood hai.",
+         "voiceText": "ریجیکشن جانچ کا آغاز ٹیسٹ اسٹرنگ {input} کے ساتھ DFA کی start state سے ہوتا ہے۔ آٹومیٹن ہر علامت کو دیکھ کر چیک کرے گا کہ آیا accepting حالت تک کوئی درست راستہ موجود ہے۔"
+        }
+       }
+      },
+      {
+       "id": "ar-step",
+       "trigger": {
+        "stepKind": "step"
+       },
+       "text": {
+        "en": {
+         "subtitle": "The DFA attempts to advance through the automaton step by step as each input character is read, following transitions for matched symbols."
+        },
+        "ur": {
+         "subtitle": "DFA ہر حرف کے پڑھے جانے پر آٹومیٹن میں قدم بہ قدم آگے بڑھنے کی کوشش کرتا ہے اور ملتی جلتی علامات پر ٹرانزیشنز کی پیروی کرتا ہے۔"
+        },
+        "ur-roman": {
+         "subtitle": "DFA har harf ke parhe jane par automaton mein qadam ba qadam aage barhne ki koshish karta hai aur milti julti alamaat par transitions ki pairwi karta hai.",
+         "voiceText": "DFA ہر حرف کے پڑھے جانے پر آٹومیٹن میں قدم بہ قدم آگے بڑھنے کی کوشش کرتا ہے اور ملتی جلتی علامات پر ٹرانزیشنز کی پیروی کرتا ہے۔"
+        }
+       }
+      },
+      {
+       "id": "ar-no",
+       "trigger": {
+        "stage": "resultReady"
+       },
+       "text": {
+        "en": {
+         "subtitle": "Processing halted because a character had no valid transition or the automaton ended in a non-accepting state. Therefore, the string {input} is rejected by the DFA."
+        },
+        "ur": {
+         "subtitle": "پروسیسنگ رک گئی کیونکہ کسی حرف پر آگے جانے کا کوئی راستہ نہیں ملا یا پھر آٹومیٹن non-accepting حالت پر رکا۔ اس لیے اسٹرنگ {input} کو DFA نے مسترد کر دیا۔"
+        },
+        "ur-roman": {
+         "subtitle": "Processing ruk gayi kyunke kisi harf par aage jane ka koi rasta nahi mila ya phir automaton non-accepting halat par ruka. Is liye string {input} ko DFA ne reject kar diya.",
+         "voiceText": "پروسیسنگ رک گئی کیونکہ کسی حرف پر آگے جانے کا کوئی راستہ نہیں ملا یا پھر آٹومیٹن non-accepting حالت پر رکا۔ اس لیے اسٹرنگ {input} کو DFA نے مسترد کر دیا۔"
+        }
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lexical-analysis",
+   "title": "Lexical analysis",
+   "stages": [
+    {
+     "id": "lexer",
+     "algorithm": "lexer",
+     "demoInput": "int total = 25;",
+     "cues": [
+      {
+       "id": "lx-start",
+       "trigger": {
+        "stepIndex": 0
+       },
+       "text": {
+        "en": {
+         "subtitle": "The lexical analyzer begins scanning the input stream from left to right, maintaining line and column positions to group raw characters into lexical tokens."
+        },
+        "ur": {
+         "subtitle": "لیکسیکل اینالائزر لائن اور کالم کی پوزیشنز کو برقرار رکھتے ہوئے بائیں سے دائیں سورس کوڈ کو اسکین کرنا شروع کرتا ہے تاکہ حروف کو ٹوکنز میں تبدیل کیا جا سکے۔"
+        },
+        "ur-roman": {
+         "subtitle": "Lexical analyzer line aur column ki positions ko barqarar rakhte hue baen se daen source code ko scan karna shuru karta hai taake huroof ko tokens mein tabdeel kiya ja sake.",
+         "voiceText": "لیکسیکل اینالائزر لائن اور کالم کی پوزیشنز کو برقرار رکھتے ہوئے بائیں سے دائیں سورس کوڈ کو اسکین کرنا شروع کرتا ہے تاکہ حروف کو ٹوکنز میں تبدیل کیا جا سکے۔"
+        }
+       }
+      },
+      {
+       "id": "lx-token",
+       "trigger": {
+        "stepKind": "token"
+       },
+       "text": {
+        "en": {
+         "subtitle": "The lexer applies the maximal munch rule: the candidate rule matching the longest substring wins. The matched text is recorded as the lexeme and categorized with its token type."
+        },
+        "ur": {
+         "subtitle": "لیکسر میکسیمل منچ کا اصول لاگو کرتا ہے: سب سے لمبے حصے سے ملنے والا رول منتخب ہوتا ہے۔ اس میچ ہونے والے متن کو lexeme کا نام دیا جاتا ہے اور متعلقہ token type تفویض ہوتی ہے۔"
+        },
+        "ur-roman": {
+         "subtitle": "Lexer maximal munch ka usool laagu karta hai: sab se lambe hisse se milne wala rule muntakhib hota hai. Is match hone wale matan ko lexeme ka naam diya jata hai aur mutaliqa token type tafweez hoti hai.",
+         "voiceText": "لیکسر میکسیمل منچ کا اصول لاگو کرتا ہے: سب سے لمبے حصے سے ملنے والا رول منتخب ہوتا ہے۔ اس میچ ہونے والے متن کو lexeme کا نام دیا جاتا ہے اور متعلقہ token type تفویض ہوتی ہے۔"
+        }
+       }
+      },
+      {
+       "id": "lx-result",
+       "trigger": {
+        "stage": "resultReady"
+       },
+       "text": {
+        "en": {
+         "subtitle": "The lexer completed scanning: found {tokenCount} tokens and {errorCount} errors in the source."
+        },
+        "ur": {
+         "subtitle": "لیکسر نے اسکیننگ مکمل کر لی: سورس کوڈ میں {tokenCount} tokens ملے اور {errorCount} errors رپورٹ ہوئیں۔"
+        },
+        "ur-roman": {
+         "subtitle": "Lexer ne scanning mukammal kar li: source code mein {tokenCount} tokens mile aur {errorCount} errors report huin.",
+         "voiceText": "لیکسر نے اسکیننگ مکمل کر لی: سورس کوڈ میں {tokenCount} tokens ملے اور {errorCount} errors رپورٹ ہوئیں۔"
+        }
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dfa-minimization",
+   "title": "DFA minimization",
+   "stages": [
+    {
+     "id": "minimize",
+     "algorithm": "minimize",
+     "demoInput": "(a|b)*abb",
+     "cues": [
+      {
+       "id": "mn-partition",
+       "trigger": {
+        "stepKind": "initialPartition"
+       },
+       "text": {
+        "en": {
+         "subtitle": "DFA minimization starts by dividing reachable states into two disjoint groups: non-accepting states and accepting states."
+        },
+        "ur": {
+         "subtitle": "DFA کی minimization تمام states کو دو الگ گروپوں میں تقسیم کر کے شروع ہوتی ہے: non-accepting اور accepting حالتیں۔"
+        },
+        "ur-roman": {
+         "subtitle": "DFA minimization reachable states ko do alag groupon mein taqseem kar ke shuru hoti hai: non-accepting states aur accepting states.",
+         "voiceText": "DFA کی minimization تمام states کو دو الگ گروپوں میں تقسیم کر کے شروع ہوتی ہے: غیر قبول اور قبول حالتیں۔"
+        }
+       }
+      },
+      {
+       "id": "mn-refine",
+       "trigger": {
+        "stepKind": "refine"
+       },
+       "text": {
+        "en": {
+         "subtitle": "During partition refinement, states in the same group are iteratively split if they transition into different target groups on any input symbol, continuing until the partition becomes stable."
+        },
+        "ur": {
+         "subtitle": "پارٹیشن ریفائنمنٹ کے دوران، ایک ہی گروپ کی states کو الگ کر دیا جاتا ہے اگر وہ کسی علامت پر مختلف گروپس میں جائیں، یہاں تک کہ پارٹیشن مستحکم ہو جائے۔"
+        },
+        "ur-roman": {
+         "subtitle": "Partition refinement ke doran, aik hi group ki states ko alag kar diya jata hai agar woh kisi alamat par mukhtalif groups mein jayen, yahan tak ke partition mustahkam ho jaye.",
+         "voiceText": "پارٹیشن ریفائنمنٹ کے دوران، ایک ہی گروپ کی states کو الگ کر دیا جاتا ہے اگر وہ کسی علامت پر مختلف گروپس میں جائیں، یہاں تک کہ پارٹیشن مستحکم ہو جائے۔"
+        }
+       }
+      },
+      {
+       "id": "mn-result",
+       "trigger": {
+        "stage": "resultReady"
+       },
+       "text": {
+        "en": {
+         "subtitle": "DFA minimization via partition refinement has finished: distinguishing states were separated while equivalent states were merged, reducing the DFA from {before} states to {after} states."
+        },
+        "ur": {
+         "subtitle": "پارٹیشن ریفائنمنٹ کے ذریعے DFA کی minimization مکمل ہو گئی ہے: مساوی states کو ضم کر کے DFA کو {before} states سے گھٹا کر صرف {after} states تک سکیڑ دیا گیا ہے۔"
+        },
+        "ur-roman": {
+         "subtitle": "Partition refinement ke zariye DFA ki minimization mukammal ho gayi hai: masawi states ko zamm kar ke DFA ko {before} states se ghata kar sirf {after} states tak sakeer diya gaya hai.",
+         "voiceText": "پارٹیشن ریفائنمنٹ کے ذریعے DFA کی minimization مکمل ہو گئی ہے: مساوی states کو ضم کر کے DFA کو {before} states سے گھٹا کر صرف {after} states تک سکیڑ دیا گیا ہے۔"
+        }
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "parsing",
+   "title": "Parsing",
+   "stages": [
+    {
+     "id": "parser",
+     "algorithm": "parser",
+     "demoInput": "x = 10 + 20;",
+     "cues": [
+      {
+       "id": "ps-enter",
+       "trigger": {
+        "stepKind": "enter"
+       },
+       "text": {
+        "en": {
+         "subtitle": "The recursive descent parser navigates top-down through grammar rules, invoking specialized parsing routines for declarations, assignments, expressions, terms, and factors."
+        },
+        "ur": {
+         "subtitle": "ریکرسیو ڈیسینٹ پارسر گرامر کے اصولوں کے مطابق اوپر سے نیچے کی طرف بڑھتا ہے اور بیانات، اسائنمنٹس، ایکسپریشنز اور فیکٹرز کے لیے طریقہ کار کو چلاتا ہے۔"
+        },
+        "ur-roman": {
+         "subtitle": "Recursive descent parser grammar ke usoolon ke mutabiq top-down barhta hai aur statements, expressions, terms aur factors ke parsing routines ko invoke karta hai.",
+         "voiceText": "ریکرسیو ڈیسینٹ پارسر گرامر کے اصولوں کے مطابق اوپر سے نیچے کی طرف بڑھتا ہے اور بیانات، اسائنمنٹس، ایکسپریشنز اور فیکٹرز کے طریقہ کار کو چلاتا ہے۔"
+        }
+       }
+      },
+      {
+       "id": "ps-match",
+       "trigger": {
+        "stepKind": "match"
+       },
+       "text": {
+        "en": {
+         "subtitle": "The parser inspects the lookahead token, confirms that it satisfies the expected grammar production, and advances the input pointer while attaching the token node to the syntax tree."
+        },
+        "ur": {
+         "subtitle": "پارسر اگلے ٹوکن کی تصدیق کرتا ہے کہ یہ متوقع گرامر رول کے مطابق ہے، ان پٹ کو آگے بڑھاتا ہے اور ٹوکن کو سنٹیکس ٹری کا حصہ بناتا ہے۔"
+        },
+        "ur-roman": {
+         "subtitle": "Parser agle token ki tasdeeq karta hai ke yeh mutawaqqe grammar rule ke mutabiq hai, input ko aage barhata hai aur token ko syntax tree ka hissa banata hai.",
+         "voiceText": "پارسر اگلے ٹوکن کی تصدیق کرتا ہے کہ یہ متوقع گرامر رول کے مطابق ہے، ان پٹ کو آگے بڑھاتا ہے اور ٹوکن کو سنٹیکس ٹری کا حصہ بناتا ہے۔"
+        }
+       }
+      },
+      {
+       "id": "ps-result",
+       "trigger": {
+        "stage": "resultReady"
+       },
+       "text": {
+        "en": {
+         "subtitle": "Recursive descent parsing has finished validating grammar productions: the parser built a complete hierarchical parse tree from {tokenCount} tokens without syntax violations."
+        },
+        "ur": {
+         "subtitle": "ریکرسیو ڈیسینٹ پارسنگ نے گرامر کی جانچ مکمل کر لی ہے: پارسر نے بغیر کسی غلطی کے {tokenCount} tokens سے ایک مکمل درجہ بدرجہ parse tree تیار کر لیا ہے۔"
+        },
+        "ur-roman": {
+         "subtitle": "Recursive descent parsing ne grammar ki janch mukammal kar li hai: parser ne baghair kisi ghalti ke {tokenCount} tokens se aik mukammal darja ba darja parse tree tayyar kar liya hai.",
+         "voiceText": "ریکرسیو ڈیسینٹ پارسنگ نے گرامر کی جانچ مکمل کر لی ہے: پارسر نے بغیر کسی غلطی کے {tokenCount} tokens سے ایک مکمل درجہ بدرجہ parse tree تیار کر لیا ہے۔"
+        }
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

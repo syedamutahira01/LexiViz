@@ -1,0 +1,28 @@
+{
+ "languages": [
+  {
+   "code": "en",
+   "label": "English",
+   "dir": "ltr",
+   "ttsLocale": "en-US",
+   "font": "inherit",
+   "review": "original"
+  },
+  {
+   "code": "ur",
+   "label": "اردو (Urdu)",
+   "dir": "rtl",
+   "ttsLocale": "ur-PK",
+   "font": "\"Noto Nastaliq Urdu\", \"Jameel Noori Nastaleeq\", \"Noto Naskh Arabic\", serif",
+   "review": "ai-translated"
+  },
+  {
+   "code": "ur-roman",
+   "label": "Roman Urdu",
+   "dir": "ltr",
+   "ttsLocale": "ur-PK",
+   "font": "inherit",
+   "review": "ai-translated"
+  }
+ ]
+}

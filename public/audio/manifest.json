@@ -1,0 +1,185 @@
+{
+ "version": 1,
+ "entries": {
+  "en/rn-fragment": {
+   "hash": "a54d8f3c",
+   "provider": "google",
+   "voice": ""
+  },
+  "ur/rn-fragment": {
+   "hash": "63517558",
+   "provider": "google",
+   "voice": ""
+  },
+  "ur-roman/rn-fragment": {
+   "hash": "63517558",
+   "provider": "google",
+   "voice": ""
+  },
+  "en/rn-done": {
+   "hash": "a175762a",
+   "provider": "google",
+   "voice": ""
+  },
+  "ur/rn-done": {
+   "hash": "6c2fcff2",
+   "provider": "google",
+   "voice": ""
+  },
+  "ur-roman/rn-done": {
+   "hash": "6c2fcff2",
+   "provider": "google",
+   "voice": ""
+  },
+  "en/nd-closure": {
+   "hash": "66058450",
+   "provider": "google",
+   "voice": ""
+  },
+  "ur/nd-closure": {
+   "hash": "933ee1a7",
+   "provider": "google",
+   "voice": ""
+  },
+  "ur-roman/nd-closure": {
+   "hash": "933ee1a7",
+   "provider": "google",
+   "voice": ""
+  },
+  "en/nd-new": {
+   "hash": "abce4876",
+   "provider": "google",
+   "voice": ""
+  },
+  "ur/nd-new": {
+   "hash": "66077db9",
+   "provider": "google",
+   "voice": ""
+  },
+  "ur-roman/nd-new": {
+   "hash": "66077db9",
+   "provider": "google",
+   "voice": ""
+  },
+  "en/ac-step": {
+   "hash": "cd5a9927",
+   "provider": "google",
+   "voice": ""
+  },
+  "ur/ac-step": {
+   "hash": "cf186582",
+   "provider": "google",
+   "voice": ""
+  },
+  "ur-roman/ac-step": {
+   "hash": "cf186582",
+   "provider": "google",
+   "voice": ""
+  },
+  "en/ar-step": {
+   "hash": "2e3140f4",
+   "provider": "google",
+   "voice": ""
+  },
+  "ur/ar-step": {
+   "hash": "101b27a7",
+   "provider": "google",
+   "voice": ""
+  },
+  "ur-roman/ar-step": {
+   "hash": "101b27a7",
+   "provider": "google",
+   "voice": ""
+  },
+  "en/lx-start": {
+   "hash": "58c2729e",
+   "provider": "google",
+   "voice": ""
+  },
+  "ur/lx-start": {
+   "hash": "4c44d9ba",
+   "provider": "google",
+   "voice": ""
+  },
+  "ur-roman/lx-start": {
+   "hash": "4c44d9ba",
+   "provider": "google",
+   "voice": ""
+  },
+  "en/lx-token": {
+   "hash": "0f8e9675",
+   "provider": "google",
+   "voice": ""
+  },
+  "ur/lx-token": {
+   "hash": "5cf75a2e",
+   "provider": "google",
+   "voice": ""
+  },
+  "ur-roman/lx-token": {
+   "hash": "5cf75a2e",
+   "provider": "google",
+   "voice": ""
+  },
+  "en/mn-partition": {
+   "hash": "88b813ee",
+   "provider": "google",
+   "voice": ""
+  },
+  "ur/mn-partition": {
+   "hash": "32d92f6c",
+   "provider": "google",
+   "voice": ""
+  },
+  "ur-roman/mn-partition": {
+   "hash": "213f9503",
+   "provider": "google",
+   "voice": ""
+  },
+  "en/mn-refine": {
+   "hash": "3eb1a9c7",
+   "provider": "google",
+   "voice": ""
+  },
+  "ur/mn-refine": {
+   "hash": "924dbcc3",
+   "provider": "google",
+   "voice": ""
+  },
+  "ur-roman/mn-refine": {
+   "hash": "924dbcc3",
+   "provider": "google",
+   "voice": ""
+  },
+  "en/ps-enter": {
+   "hash": "ee142eb0",
+   "provider": "google",
+   "voice": ""
+  },
+  "ur/ps-enter": {
+   "hash": "527076da",
+   "provider": "google",
+   "voice": ""
+  },
+  "ur-roman/ps-enter": {
+   "hash": "880815dc",
+   "provider": "google",
+   "voice": ""
+  },
+  "en/ps-match": {
+   "hash": "c64b4550",
+   "provider": "google",
+   "voice": ""
+  },
+  "ur/ps-match": {
+   "hash": "0f567277",
+   "provider": "google",
+   "voice": ""
+  },
+  "ur-roman/ps-match": {
+   "hash": "0f567277",
+   "provider": "google",
+   "voice": ""
+  }
+ }
+}
